@@ -1,0 +1,49 @@
+{
+	"version": 1,
+	"allow_edit": true,
+	"plugins": [],
+	"panes": [
+		{
+			"width": 1,
+			"row": {
+				"3": 1
+			},
+			"col": {
+				"3": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Temperatura",
+						"value": "datasources[\"Uceva\"][\"temperatura\"]",
+						"units": "°C",
+						"min_value": 0,
+						"max_value": 100
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Humedad",
+						"value": "datasources[\"Uceva\"][\"humedad\"]",
+						"units": "%RH",
+						"min_value": 0,
+						"max_value": 100
+					}
+				}
+			]
+		}
+	],
+	"datasources": [
+		{
+			"name": "Uceva",
+			"type": "dweet_io",
+			"settings": {
+				"thing_id": "uceva00"
+			}
+		}
+	],
+	"columns": 3
+}
